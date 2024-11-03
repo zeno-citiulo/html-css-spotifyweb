@@ -42,6 +42,11 @@ aside .top{
   color: #686868;
 }
 
+.section-top .home:hover{
+  color: white;
+  cursor: pointer;
+}
+
 .home-img{
   width: 15%;
   vertical-align: middle;
@@ -52,6 +57,11 @@ aside .top{
   color: #686868;
 }
 
+.section-top .search:hover{
+  color: white;
+  cursor: pointer;
+}
+
 .search-img{
   width: 15%;
   vertical-align: middle;
@@ -59,6 +69,11 @@ aside .top{
 
 .section-top .libreria{
   color: #686868;
+}
+
+.section-top .libreria:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .libreria-img{
@@ -206,6 +221,11 @@ aside .bottom{
   font-size: small;
 }
 
+.cta span:hover{
+  font-size: medium;
+  cursor: pointer;
+}
+
 .category-title{
   margin-left: 20px;
   margin-top: 20px;
@@ -271,6 +291,7 @@ aside .bottom{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .category span{
@@ -349,6 +370,7 @@ footer{
   margin-right: 15px;
   margin-left: 15px;
   font-size:x-small;
+  color: white;
 }
 
 .progress-bar-container {
@@ -385,10 +407,17 @@ footer{
 .progress-bar-right {
   width: 20%;
   height: 100%;
+  border-radius: 5px;
   background-color: white;
 }
 
 /* RESPONSIVE */
+
+@media screen and (max-width:700px) {
+  .col{
+    width: calc(100%/4);
+  }
+}
 
 @media screen and (max-width:600px){
   aside{
@@ -478,5 +507,9 @@ footer{
 
   .icone i:first-child{
     padding-right: 0px;
+  }
+
+  .col{
+    width: calc(100%/2);
   }
 }
