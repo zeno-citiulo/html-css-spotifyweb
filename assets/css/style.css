@@ -20,11 +20,11 @@ body{
 
 .main-wrapper{
   height: 100vh;
+  width: 100%;
 }
 
 main{
   height: calc(100% - 90px);
-  background-color: lightblue;
   display: flex;
 }
 
@@ -42,31 +42,26 @@ aside .top{
   color: #686868;
 }
 
-.section-top .home::before{
-  content: url("/assets/img/home.svg");
-  display: inline-block;
+.home-img{
   width: 15%;
   vertical-align: middle;
 }
+
 
 .section-top .search{
   color: #686868;
 }
 
-.section-top .search::before{
-  content: url("/assets/img/search.svg");
-  display: inline-block;
+.search-img{
   width: 15%;
   vertical-align: middle;
 }
 
-.section-top .library{
+.section-top .libreria{
   color: #686868;
 }
 
-.section-top .library::before{
-  content: url("/assets/img/libreria.svg");
-  display: inline-block;
+.libreria-img{
   width: 15%;
   vertical-align: middle;
 }
@@ -137,9 +132,15 @@ aside .bottom{
   margin: 0 auto;
 }
 
-.section-top img{
+.section-top .spoty{
   margin-top: 15px;
   width: 80%;
+}
+
+.section-top .spoty-small{
+  margin-top: 15px;
+  width: 80%;
+  display: none;
 }
 
 .playlist{
@@ -205,16 +206,218 @@ aside .bottom{
   font-size: small;
 }
 
-footer{
-  height: 90px;
-  background-color: gray;
+
+.category {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category span{
+  color: #7D7E83;
+  padding-right: 20px;
+  font-size: small;
+  font-weight: bold;
 }
 
 
+/* FOOTER */
+
+footer{
+  height: 90px;
+  position: fixed;
+  width: 100vw;
+  background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-left{
+  max-width: 40vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.sinister{
+  width: 5vh;
+}
+
+.brano{
+  margin-left: 5px;
+  margin-right: 30px;
+}
+
+.brano p{
+  font-size: small;
+}
+
+.brano .white{
+  color: white;
+}
+
+.brano .grey{
+  color: #7E7E7E;
+}
+
+.icone i:first-child{
+  padding-right: 15px;
+}
+
+.row-center{
+  width: 50%;
+  text-align: center;
+}
+
+.sopra{
+  margin-bottom: 10px;
+}
+
+.sopra i{
+  padding-right: 15px;
+}
+
+.row-center .sotto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sotto p{
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size:x-small;
+}
+
+.progress-bar-container {
+  width: 80%;
+  height: 3px;
+  background-color: #5A5A5A;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 30%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.row-right{
+  max-width: 35vw;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 5px;
+}
+
+.progress-bar-container-right {
+  width: 70px;
+  height: 3px;
+  background-color: #5A5A5A;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-right {
+  width: 20%;
+  height: 100%;
+  background-color: white;
+}
+
 /* RESPONSIVE */
 
-@media screen and (max-widith:600px){
-    aside{
-      width: 50px;
-    }
+@media screen and (max-width:600px){
+  aside{
+    width: 50px;
+  }
+
+  aside .spoty{
+    display: none;
+  }
+
+  .section-top .spoty-small{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  aside .home{
+    display: none;
+  }
+
+  aside .home-img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  aside .search{
+    display: none;
+  }
+
+  aside .search-img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  aside .libreria{
+    display: none;
+  }
+
+  aside .libreria-img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .content{
+    width: calc(100% - 50px);
+  }
+
+  .category{
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0  auto;
+  }
+
+  h3{
+    display: none;
+  }
+
+  .playlist{
+    display: none;
+  }
+
+  .name-playlist{
+    display: none;
+  }
+
+  .section-bottom span{
+    display: none;
+  }
+
+  .line{
+    display: none;
+  }
+
+  .section-bottom .download{
+    width: 100%;
+    display: block;
+  }
+
+  .section-bottom .profile{
+    width: 100%;
+    display: block;
+  }
+
+  .icone i:first-child{
+    padding-right: 0px;
+  }
 }
