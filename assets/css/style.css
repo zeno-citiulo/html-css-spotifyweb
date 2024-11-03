@@ -92,6 +92,10 @@ aside .top{
   margin-top: 15px;
 }
 
+.playlist:hover{
+  cursor: pointer;
+}
+
 .playlist i{
   vertical-align: middle;
   display: flex;
@@ -101,12 +105,19 @@ aside .top{
 .playlist .box{
   background-color: #A3A3A3;
   padding: 10px 10px;
-  
+}
+
+.playlist .box:hover{
+  background-color: white;
 }
 
 .playlist p{
   margin-top: 5%;
   color: #636363;
+}
+
+.playlist p:hover{
+  color: white;
 }
 
 .name-playlist{
@@ -116,6 +127,11 @@ aside .top{
 
 .name-playlist span{
   color: #636363;
+}
+
+.name-playlist span:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .name-playlist li{
@@ -162,6 +178,21 @@ aside .bottom{
   color: white;
 }
 
+.section-bottom-top{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.section-bottom-top span{
+  font-weight: bold;
+  color: #7E7E7E;
+}
+
+.section-bottom-top span:hover{
+  color: white;
+  cursor: pointer;
+}
 
 .section-bottom{
   display: flex;
@@ -265,6 +296,10 @@ aside .bottom{
   width: 100%;
 }
 
+.card-img img:hover{
+  cursor: pointer;
+}
+
 .card-img .round{
   border-radius: 100px;
 }
@@ -301,6 +336,10 @@ aside .bottom{
   font-weight: bold;
 }
 
+.category span:hover{
+  color: white;
+  cursor: pointer;
+}
 
 /* FOOTER */
 
@@ -321,6 +360,8 @@ footer{
   align-items: center;
   margin-left: 5px;
 }
+
+
 
 .sinister{
   width: 5vh;
